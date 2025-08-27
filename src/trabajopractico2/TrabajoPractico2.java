@@ -17,11 +17,8 @@ public class TrabajoPractico2 {
         System.out.println("Inicio de Trabajo");
         System.out.println("Commit Ema Dupre");
         System.out.println("Participantes: José, Naiara, Claudia, Gonzalo , enzo , asdasd");
-<<<<<<< HEAD
-        System.out.println("dale locoooooooooooooooooooooooo arranca o no arranca");
-=======
         System.out.println("que onda pibes");
->>>>>>> 65ce76739fb3d9b3e0182f9e823e4d1b31b70d58
+        System.out.println("arranca o no arranca ");
     }
     
 }
