@@ -19,6 +19,7 @@ public class TrabajoPractico2 {
         System.out.println("Participantes: José, Naiara, Claudia, Gonzalo , enzo , asdasd");
         System.out.println("que onda pibes");
         System.out.println("arranca o no arranca ");
+        System.out.println("hola ^-^");
     }
     
 }
