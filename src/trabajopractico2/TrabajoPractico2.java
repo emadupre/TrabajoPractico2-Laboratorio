@@ -21,6 +21,7 @@ public class TrabajoPractico2 {
         System.out.println("arranca o no arranca ");
         System.out.println("hola ^-^");
         System.out.println("Soy Ema");
+        System.out.println("bomdia");
     }
     
 }
