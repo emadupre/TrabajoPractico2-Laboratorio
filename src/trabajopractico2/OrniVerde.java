@@ -4,10 +4,35 @@
  */
 package trabajopractico2;
 
+import java.util.Scanner;
+
 /**
  *
  * @author emadupre
  */
-public class OrniVerde {
+public class OrniVerde extends PadreCastor implements MamaPata {
+    private String nombre;
     
+    public OrniVerde(String nombre, double cola, double velocidad){
+        super(cola, velocidad);
+        this.nombre = nombre;
+    }
+    
+    @Override
+    public void tocarOrgano(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Do-Re-Mi (Presiona ENTER para continuar)");
+        sc.nextLine();
+        System.out.println("Fa-Sol-La-Si");
+    }
+    
+    public void tocarGuitorgan(){
+        super.tocarGuitarra();
+        this.tocarOrgano();
+        System.out.println("cuac... cuac..");
+    }
+
+    public String getNombre(){
+        return nombre;
+    }
 }
