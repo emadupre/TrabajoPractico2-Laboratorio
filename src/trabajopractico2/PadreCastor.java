@@ -14,6 +14,15 @@ public class PadreCastor {
     protected double velocidad;
     
     public PadreCastor(double cola, double velocidad){
-        
+        this.cola = cola;
+        this.velocidad = velocidad;
+    }
+    
+    public void nadar(){
+        System.out.println("Nadando a: " + velocidad + "km");
+    }
+    
+    public void tocarGuitarra(){
+        System.out.println("Toca cuerda");
     }
 }
