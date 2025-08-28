@@ -10,5 +10,10 @@ package trabajopractico2;
  * @author Enzo_2
  */
 public class PadreCastor {
+    protected double cola;
+    protected double velocidad;
     
+    public PadreCastor(double cola, double velocidad){
+        
+    }
 }
