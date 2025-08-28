@@ -5,6 +5,8 @@
  */
 package trabajopractico2;
 
+import java.util.Random;
+
 /**
  *
  * @author Enzo_2
@@ -23,6 +25,7 @@ public class PadreCastor {
     }
     
     public void tocarGuitarra(){
-        System.out.println("Toca cuerda");
+        Random r = new Random();
+        System.out.println("Toca cuerda " + r.nextInt(6) + 1);
     }
 }
