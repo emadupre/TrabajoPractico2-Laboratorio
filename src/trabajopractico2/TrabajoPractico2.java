@@ -20,7 +20,7 @@ public class TrabajoPractico2 {
         System.out.println("Trabajo Práctico 2");
         System.out.println("Participantes: \n\t-Bossa José \n\t-Bongiovanni Naiara \n\t-Bonisoni Claudia \n\t-Achucarro"
                 + "Gonzalo \n\t-Fet Enzo \n\t-García Emmanuel");
-
+//Ejercicio 1 del main
         OrniVerde orni1 = Nacimiento.creadorDeOrniVerde("Naiara");
         System.out.println("---OrniVerde Creado--");
         orni1.mostrarInformacion();
@@ -77,5 +77,18 @@ public class TrabajoPractico2 {
                     System.out.println("Opción Inválida.");
             }
         } while (!cont);
+
+        System.out.println("\n--------------------------------------\n");
+//Ejercicio 2 del main      
+        PadreCastor[] orniss = new PadreCastor[3];
+        try {
+            orniss[0] = orni2;
+            orniss[1] = orni1;
+            orniss[2] = orni3;
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Fuera del límite.");
+        } finally {
+            System.out.println("Los ornitohermanos juntos al fin...");
+        }
     }
 }
