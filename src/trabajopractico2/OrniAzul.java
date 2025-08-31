@@ -41,6 +41,8 @@ public class OrniAzul extends PadreCastor{
     public void mostrarInformacion(){
         System.out.println(toString());
     }
+    
+    
 
     @Override
     public String toString() {

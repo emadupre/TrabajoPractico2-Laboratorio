@@ -4,7 +4,6 @@
  */
 package trabajopractico2;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -19,130 +18,64 @@ public class TrabajoPractico2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Trabajo Práctico 2");
-        System.out.println("Commit Ema Dupre");
         System.out.println("Participantes: \n\t-Bossa José \n\t-Bongiovanni Naiara \n\t-Bonisoni Claudia \n\t-Achucarro"
                 + "Gonzalo \n\t-Fet Enzo \n\t-García Emmanuel");
-        double cola = 0;
-        double velocidad = 0;
-        double propulsion = 0;
-        boolean continuar = true;
-        System.out.println("---Creando a OrniVerde---");
 
-        while (continuar) {
-            try {
-                System.out.println("Ingrese la medida de la cola (max/15cm)");
-                cola = Double.parseDouble(sc.nextLine());
-                if (cola > 15) {
-                    System.out.println("Se exedió del máximo.");
-                    System.out.println("--------------------------------------\n");
-                    continue;
-                }
-                continuar = false;
+        OrniVerde orni1 = Nacimiento.creadorDeOrniVerde("Naiara");
+        System.out.println("---OrniVerde Creado--");
+        orni1.mostrarInformacion();
 
-                continuar = true;
+        System.out.println("\n--------------------------------------\n");
 
-                while (continuar) {
+        OrniAzul orni2 = Nacimiento.creadorDeOrniAzul("Blue");
+        System.out.println("---Primer OrniAzul Creado--");
+        orni2.mostrarInformacion();
 
-                    System.out.println("Ingrese la velocidad (max/8km/h)");
-                    velocidad = Double.parseDouble(sc.nextLine());
-                    if (velocidad > 15) {
-                        System.out.println("Se exedió del máximo.");
-                        System.out.println("\n--------------------------------------\n");
-                        continue;
-                    }
-                    continuar = false;
-                }
+        System.out.println("\n--------------------------------------\n");
 
-                OrniVerde orni1 = new OrniVerde("Naiara", cola, velocidad);
-                System.out.println("---OrniVerde Creado--");
-                orni1.mostrarInformacion();
-                System.out.println("\n--------------------------------------\n");
+        OrniAzul orni3 = Nacimiento.creadorDeOrniAzul("Blui");
+        System.out.println("---Segundo OrniAzul Creado--");
+        orni3.mostrarInformacion();
 
-                System.out.println("---Creando Ornis Azul---"
-                        + " \nComenzamos por Blue");
-                continuar = true;
-                while (continuar) {
-                    System.out.println("Ingrese la medida de la cola (max/15cm)");
-                    cola = Double.parseDouble(sc.nextLine());
-                    if (cola > 15) {
-                        System.out.println("Se exedió del máximo.");
-                        System.out.println("--------------------------------------\n");
-                        continue;
-                    }
-                    continuar = false;
-                }
-                continuar = true;
-                while (continuar) {
-                    System.out.println("Ingrese la velocidad (max/8km/h)");
-                    velocidad = Double.parseDouble(sc.nextLine());
-                    if (velocidad > 15) {
-                        System.out.println("Se exedió del máximo.");
-                        System.out.println("\n--------------------------------------\n");
-                        continue;
-                    }
-                    continuar = false;
-                }
-                continuar = true;
-                while (continuar) {
-                    System.out.println("Ingrese la propulsión (entre 5/10km)");
-                    propulsion = Double.parseDouble(sc.nextLine());
-                    if (propulsion > 10 || propulsion < 5) {
-                        System.out.println("Fuera del rango.");
-                        System.out.println("\n--------------------------------------\n");
-                        continue;
-                    }
-                    continuar = false;
-                }
+        System.out.println("\n--------------------------------------\n");
+        Boolean cont = false;
+        do {
+            System.out.println("Ingresar al Menú de acciones de:"
+                    + "\na): OrniVerde."
+                    + "\nb): OrniAzul."
+                    + "\nc): Salir.");
+            String resp = sc.nextLine();
 
-                OrniAzul orni2 = new OrniAzul("Blue", propulsion, cola, velocidad);
-                System.out.println("---Orni Blue Creado--");
-                orni2.mostrarInformacion();
-                System.out.println("\n--------------------------------------\n");
-
-                System.out.println("Seguimos por Blui");
-
-                continuar = true;
-                while (continuar) {
-                    System.out.println("Ingrese la medida de la cola (max/15cm)");
-                    cola = Double.parseDouble(sc.nextLine());
-                    if (cola > 15) {
-                        System.out.println("Se exedió del máximo.");
-                        System.out.println("--------------------------------------\n");
-                        continue;
-                    }
-                    continuar = false;
-                }
-                continuar = true;
-                while (continuar) {
-                    System.out.println("Ingrese la velocidad (max/8km/h)");
-                    velocidad = Double.parseDouble(sc.nextLine());
-                    if (velocidad > 15) {
-                        System.out.println("Se exedió del máximo.");
-                        System.out.println("\n--------------------------------------\n");
-                        continue;
-                    }
-                    continuar = false;
-                }
-                continuar = true;
-                while (continuar) {
-                    System.out.println("Ingrese la propulsión (entre 5/10km)");
-                    propulsion = Double.parseDouble(sc.nextLine());
-                    if (propulsion > 10 || propulsion < 5) {
-                        System.out.println("Fuera del rango.");
-                        System.out.println("\n--------------------------------------\n");
-                        continue;
-                    }
-                    continuar = false;
-                }
-
-                OrniAzul orni3 = new OrniAzul("Blui", propulsion, cola, velocidad);
-                System.out.println("---Orni Blui Creado--");
-                orni2.mostrarInformacion();
-                System.out.println("\n--------------------------------------\n");
-            } catch (NumberFormatException e) {
-                System.out.println("Ingreso de dato incorrecto.");
+            switch (resp) {
+                case "a":
+                    orni1.menuDeAcciones();
+                    break;
+                case "b":
+                    do {
+                        System.out.println("Elija que Orni quiere que Nade "
+                                + "\na)Blue."
+                                + "\nb)Blui.");
+                        resp = sc.nextLine();
+                        if (resp.equalsIgnoreCase("a")) {
+                            orni2.nadar();
+                            break;
+                        } else {
+                            if (resp.equalsIgnoreCase("b")) {
+                                orni3.nadar();
+                                break;
+                            } else {
+                                System.out.println("Opción incorrecta. Vuelva a intentar");
+                            }
+                        }
+                    } while ((!resp.equalsIgnoreCase("a")) || (!resp.equalsIgnoreCase("b")));
+                    break;
+                case "c":
+                    System.out.println("Usted salió del menú.");
+                    cont = true;
+                    break;
+                default:
+                    System.out.println("Opción Inválida.");
             }
-        }
+        } while (!cont);
     }
-
 }
