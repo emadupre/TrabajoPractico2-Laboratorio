@@ -35,4 +35,15 @@ public class OrniVerde extends PadreCastor implements MamaPata {
     public String getNombre(){
         return nombre;
     }
+    public void mostrarInformacion(){
+        System.out.println(toString());
+    }
+
+    @Override
+    public String toString() {
+        return nombre +" es un OrniVerde, tiene una cola que mide " + cola
+                + "cm y su velocidad alcanza los" + velocidad + " km/h";
+    }
+    
+    
 }

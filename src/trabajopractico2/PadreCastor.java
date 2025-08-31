@@ -28,4 +28,11 @@ public class PadreCastor {
         Random r = new Random();
         System.out.println("Toca cuerda " + r.nextInt(6) + 1);
     }
+
+    @Override
+    public String toString() {
+        return "PadreCastor tiene cola de "+ cola + "cm y su velocidad alcanza los " + velocidad + "km/h";
+    }
+    
+    
 }
