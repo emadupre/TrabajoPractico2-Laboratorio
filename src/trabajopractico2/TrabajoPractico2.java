@@ -90,5 +90,6 @@ public class TrabajoPractico2 {
         } finally {
             System.out.println("Los ornitohermanos juntos al fin...");
         }
+        System.out.println("asdasd");
     }
 }
