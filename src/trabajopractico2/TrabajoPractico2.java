@@ -4,6 +4,9 @@
  */
 package trabajopractico2;
 
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -90,6 +93,10 @@ public class TrabajoPractico2 {
         } finally {
             System.out.println("Los ornitohermanos juntos al fin...");
         }
-        System.out.println("asdasd");
+//Ejercicio 3 del main
+           List<OrniAzul>listaNadadores = new ArrayList<>();
+        listaNadadores.add(orni2);
+        listaNadadores.add(orni3);
+        listaNadadores.sort(Comparator.comparingInt(OrniAzul::getPropulsion));
     }
 }
