@@ -95,14 +95,14 @@ public class TrabajoPractico2 {
             System.out.println("Los ornitohermanos juntos al fin...");
         }
 //Ejercicio 3 del main
-           List<OrniAzul>listaNadadores = new ArrayList<>();
+        List<OrniAzul> listaNadadores = new ArrayList<>();
         listaNadadores.add(orni2);
         listaNadadores.add(orni3);
         listaNadadores.sort((o1, o2) -> Double.compare(o1.getPropulsion(), o2.getPropulsion()));
         Iterator<OrniAzul> it = listaNadadores.iterator();
-while (it.hasNext()) {
-    OrniAzul o = it.next();
-    System.out.println("Nadador: " + o.getNombre() + " - Propulsión: " + o.getPropulsion());
-}
+        while (it.hasNext()) {
+            OrniAzul o = it.next();
+            System.out.println("Nadador: " + o.getNombre() + " - Propulsión: " + o.getPropulsion());
+        }
     }
 }
