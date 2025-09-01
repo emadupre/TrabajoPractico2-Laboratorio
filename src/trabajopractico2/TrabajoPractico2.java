@@ -6,6 +6,7 @@ package trabajopractico2;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -97,6 +98,11 @@ public class TrabajoPractico2 {
            List<OrniAzul>listaNadadores = new ArrayList<>();
         listaNadadores.add(orni2);
         listaNadadores.add(orni3);
-        listaNadadores.sort(Comparator.comparingInt(OrniAzul::getPropulsion));
+        listaNadadores.sort((o1, o2) -> Double.compare(o1.getPropulsion(), o2.getPropulsion()));
+        Iterator<OrniAzul> it = listaNadadores.iterator();
+while (it.hasNext()) {
+    OrniAzul o = it.next();
+    System.out.println("Nadador: " + o.getNombre() + " - Propulsión: " + o.getPropulsion());
+}
     }
 }
